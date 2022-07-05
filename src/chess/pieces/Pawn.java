@@ -8,6 +8,7 @@ import chess.Color;
 
 public class Pawn extends ChessPiece {
 
+	// comportment of moves a pawn
 	private ChessMatch chessMatch;
 	
 	public Pawn(Board board, Color color, ChessMatch chessMatch) {

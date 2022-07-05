@@ -7,6 +7,8 @@ import chess.Color;
 
 public class Bishop extends ChessPiece{
 
+	
+	// comportment of moves a bishop
 	public Bishop(Board board, Color color) {
 		super(board, color);
 		

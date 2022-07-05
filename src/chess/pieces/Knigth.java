@@ -7,6 +7,7 @@ import chess.Color;
 
 public class Knigth extends ChessPiece {
 
+	// comportment of moves a knigth
 	public Knigth(Board board, Color color) {
 		super(board, color);
 		

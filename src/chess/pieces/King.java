@@ -8,6 +8,8 @@ import chess.Color;
 
 public class King extends ChessPiece {
 	
+	
+	// comportment of moves a king
 	private ChessMatch chessMatch;
 
 	public King(Board board, Color color, ChessMatch chessMatch) {

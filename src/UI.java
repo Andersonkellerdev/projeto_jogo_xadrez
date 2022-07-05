@@ -38,7 +38,7 @@ public class UI {
 		System.out.flush();
 	}
 	
-	public static ChessPosition readChessPosition(Scanner sc) {
+	public static ChessPosition readChessPosition(Scanner sc) { 
 		try {
 			String s = sc.nextLine();
 			char column = s.charAt(0);
@@ -50,8 +50,8 @@ public class UI {
 		}
 	}
 
-	public static void printMatch(ChessMatch chessMatch, List<ChessPiece> captured) {
-		printBoard(chessMatch.getPieces());
+	public static void printMatch(ChessMatch chessMatch, List<ChessPiece> captured) { //printing match, and turns of plays
+		printBoard(chessMatch.getPieces()); 
 		System.out.println();
 		printCapturedPieces(captured);
 		System.out.println();
@@ -59,16 +59,16 @@ public class UI {
 		if (!chessMatch.getCheckMate()) {
 		System.out.println("Waiting player: " + chessMatch.getCurrentPlayer());
 			if (chessMatch.getCheck()) {
-				System.out.println("CHECK!");
+				System.out.println("CHECK!"); //check verify
 			}
 		}
 		else {
 			System.out.println("CHECKMATE!");
-			System.out.println("Winner: " + chessMatch.getCurrentPlayer());
+			System.out.println("Winner: " + chessMatch.getCurrentPlayer()); //if checkmate, declared winner and finished game
 		}
 	}
 	
-	public static void printBoard(ChessPiece[][] pieces) {
+	public static void printBoard(ChessPiece[][] pieces) { //printing board at rowns and columns
 		for (int i = 0; i < pieces.length; i++) {
 			System.out.print((8 - i) + " ");
 			for (int j = 0; j < pieces.length; j++) {
@@ -79,7 +79,7 @@ public class UI {
 		System.out.print("  a b c d e f g h");
 	}
 	
-	public static void printBoard(ChessPiece[][] pieces, boolean[][] possibleMoves) {
+	public static void printBoard(ChessPiece[][] pieces, boolean[][] possibleMoves) { //printing board at rowns and columns whit possibles moves
 		for (int i = 0; i < pieces.length; i++) {
 			System.out.print((8 - i) + " ");
 
@@ -91,7 +91,7 @@ public class UI {
 		System.out.print("  a b c d e f g h");
 	}
 	
-	private static void printPiece(ChessPiece piece, boolean background) {
+	private static void printPiece(ChessPiece piece, boolean background) { //printing pieces in the board
 		if (background) {
 			System.out.print(ANSI_BLUE_BACKGROUND);
 		}
@@ -110,7 +110,7 @@ public class UI {
         System.out.print(" ");
 	}
 	
-	private static void printCapturedPieces(List<ChessPiece> captured) {
+	private static void printCapturedPieces(List<ChessPiece> captured) { // printing list captured pieces of the game
 		List<ChessPiece> white = captured.stream().filter(x -> x.getColor() == Color.WHITE).collect(Collectors.toList());
 		List<ChessPiece> black = captured.stream().filter(x -> x.getColor() == Color.BLACK).collect(Collectors.toList());
 		System.out.println("Captured pieces:");

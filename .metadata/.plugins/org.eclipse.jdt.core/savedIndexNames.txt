@@ -1,0 +1,1 @@
+INDEX VERSION 1.131+F:\JAVA\WorkSpace\projeto_jogo_xadrez\.metadata\.plugins\org.eclipse.jdt.core

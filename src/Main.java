@@ -18,26 +18,28 @@ public class Main {
 		ChessMatch chessMatch = new ChessMatch();
 		List<ChessPiece> captured = new ArrayList<>();
 		
+		//if not check this play is continue
 		while (!chessMatch.getCheckMate()) {
 		try {	
 			UI.clearScreen();
 			UI.printMatch(chessMatch, captured);
 			System.out.println();
 			System.out.print("Source: ");
-			ChessPosition source = UI.readChessPosition(sc);
+			ChessPosition source = UI.readChessPosition(sc); //read source of piece movemented, and valid
 			
-			boolean[][] possibleMoves = chessMatch.possibleMoves(source);
+			boolean[][] possibleMoves = chessMatch.possibleMoves(source); //verify its possible move and printing in board
 			UI.clearScreen();
 			UI.printBoard(chessMatch.getPieces(), possibleMoves);
 			System.out.println();
 			System.out.print("Target: ");
-			ChessPosition target = UI.readChessPosition(sc);
+			ChessPosition target = UI.readChessPosition(sc); //read target position of move 
 			
-			ChessPiece capturedPiece = chessMatch.performChessMove(source, target);
+			ChessPiece capturedPiece = chessMatch.performChessMove(source, target); //if valid perform the movement
 			if (capturedPiece != null) {
 				captured.add(capturedPiece);
 			}
 			
+			// method the promotion special move
 			if (chessMatch.getPromoted() != null) {
 				System.out.print("Enter piece for promotion (B/N/R/Q): ");
 				String type = sc.nextLine().toUpperCase();

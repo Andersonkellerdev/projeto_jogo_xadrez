@@ -7,6 +7,7 @@ import chess.Color;
 
 public class Queen extends ChessPiece{
 
+	// comportment of moves a quenn
 	public Queen(Board board, Color color) {
 		super(board, color);
 		

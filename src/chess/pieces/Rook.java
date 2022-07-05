@@ -7,6 +7,7 @@ import chess.Color;
 
 public class Rook extends ChessPiece{
 
+	// comportment of moves a rook
 	public Rook(Board board, Color color) {
 		super(board, color);
 		

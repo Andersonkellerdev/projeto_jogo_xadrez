@@ -23,7 +23,7 @@ public class Board {
 	public int getColumns() {
 		return columns;
 	}
-	
+	//verify is the valid positions
 	public Piece piece(int row, int column) {
 		if (!positionExists(row, column)) {
 			throw new BoardException("Position not on the board");
@@ -31,13 +31,13 @@ public class Board {
 		return pieces[row][column];
 	}
 	
-	public Piece piece(Position position) {
+	public Piece piece(Position position) { 
 		if (!positionExists(position)) {
 			throw new BoardException("Position not on the board");
 		}
 		return pieces[position.getRow()][position.getColumn()];
 	}
-	
+	//verify position whit a piece
 	public void placePiece(Piece piece, Position position) {
 		if (thereIsAPiece(position)) {
 			throw new BoardException("There is already a piece on position " + position);
@@ -45,7 +45,7 @@ public class Board {
 		pieces[position.getRow()][position.getColumn()] = piece;
 		piece.position = position;
 	}
-	
+	// remove pieces on the board
 	public Piece removePiece(Position position) {
 		if (!positionExists(position)) {
 			throw new BoardException("Position not on the board");
