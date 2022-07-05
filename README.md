@@ -1,6 +1,17 @@
 # projeto_jogo_xadrez
-Projeto de um jogo de xadrez do curso de Java do professor
-Nelio Alves realizado pela Udemy.
+Java Chess-mate program oriented for teacher Nelio Alves.
 
-Skills utilizadas: 
+Skills defering: Java OO, pholymorphis, encapsulation, inheritance.
+
+for game: open git bash in paste bin for project
+git command : java Main
+
+run.png
+run2.png
+run3.png
+
+great, the game is runing!!
+
+
+
 
